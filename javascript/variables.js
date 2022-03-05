@@ -12,6 +12,7 @@ text="!text cannot start with a digit , !text cannot contain space, !text can co
 
 console.log('\n'+text+'\n'+messege);
 
+
 // variables can be created using let, var, const and nothing(incase of nonstrict mode).
 
 // let can be reassigned and cannot be redeclared its block scoped
