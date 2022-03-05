@@ -99,10 +99,10 @@ console.log(typeof null);  //object
 console.log(typeof (null + "1")); //string  // oh god strins are like thanos
 
 let space=null;
-console.log(space**null); //1 
+console.log(space**null); //1 //null as numeric conversion becomes zero
 
 space=null;
-console.log(space**Infinity); //0
+console.log(space**Infinity); //0  //null as numeric conversion becomes zero
 
 space=null;
 console.log(Infinity/Infinity); //NaN //errous calculation or math error generally gives NaN
