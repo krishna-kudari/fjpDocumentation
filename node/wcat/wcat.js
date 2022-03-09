@@ -105,6 +105,7 @@ function numberingValidlines(filearr) {
 
       // }
       if (fileconarr[i] != "\r") {
+        
         // console.log(fileconarr[i]);
         processedetring += val + "\t" + fileconarr[i] + "\n";
         val++;

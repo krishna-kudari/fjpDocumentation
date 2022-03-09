@@ -42,3 +42,5 @@ const { fileURLToPath } = require("url");
 //for excessing an object/function of different file use module .exports in that file and here require it then use with '.' notation
 let addfn=require("../node/fs1.js");
 console.log(addfn(2,4));
+
+console.log(fs.readFileSync('../node/jsmar08.js','utf-8'))
