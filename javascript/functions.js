@@ -34,7 +34,7 @@ console.log(dowork);        //[Function: dowork]
 //function declared can be called before they declared but function expressions cannot be ,they throws an error bcz they are variables which contain some vaalue describing some action.
 //A Function Expression is created when the execution reaches it and is usable only from that moment.
 
-//in strict mode teh function declare dinside ablock are invisible outside of it
+//in strict mode the function declared inside a block are invisible outside of it
 "use strict";
 let moon="chand";
 

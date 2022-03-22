@@ -23,9 +23,32 @@ const fs = require("fs");
 let userinput = process.argv.slice(2);
 let filearr = [];
 for (let i = 0; i < userinput.length; i++) {
-  filearr.push(userinput[i]);
+  if(fs.existsSync(userinput[i])) filearr.push(userinput[i]);
+ 
   // console.log(fs.readFileSync(userinput[i]))
 }
+
+let optionarr=[];
+let i=0;
+while(!fs.existsSync(userinput[i])){
+  optionarr[i]=userinput[i];
+  i++;
+}
+for(let i=0;i<optionarr.length;i++){
+  let resultstring="";
+  if (optionarr[i] == "-s") {
+    processBlankSpaces(filearr);
+  } else if (optionarr[i] == "-n") {
+    numberingall(filearr);
+  } else if (optionarr[i] == "-b") {
+    numberingValidlines(filearr);
+  }
+}
+// console.log(optionarr);
+// console.log(filearr);
+
+
+
 if (filearr[0] == "-s") {
   processBlankSpaces(filearr.slice(1));
 } else if (filearr[0] == "-n") {
@@ -61,14 +84,19 @@ function processBlankSpaces(filearr) {
   for (let i = 0; i < filearr.length; i++) {
     let filecon = fs.readFileSync(filearr[i], "utf-8");
     // fileconarr=filecon.split(' ');
-    let processedetring = " ";
-    for (let i = 0; i < filecon.length; i++) {
-      if (filecon[i] == "\n" || filecon[i] == "\r") {
-        continue;
-      } else {
-        processedetring += filecon[i];
+    let processedetring = "\n";
+    let fileconarr=filecon.split('\n');
+    processedetring+=fileconarr[0];
+    // console.log(fileconarr);
+    for (let i = 1; i < fileconarr.length; i++) {
+      if (fileconarr[i] == "\r" ) {
+        fileconarr.splice(i,1);
       }
+        processedetring += fileconarr[i]+'\n';
+        
+      
     }
+    // console.log(fileconarr);
     console.log(processedetring);
   }
 }
