@@ -1,5 +1,7 @@
 const request = require("request");
 const cheerio = require("cheerio");
+const path = require("path");
+const fs = require("fs");
 const { getscorecard } = require('./scorecard');
 function getAllMatch(url) {
   request(url, cb2);
@@ -20,7 +22,7 @@ function handle(html) {
     let scorelinks = $(anchorElement[i]).attr("href");
     let fulllink = "https://www.espncricinfo.com" + scorelinks;
     getscorecard(fulllink);
-    break;
+    // break;
   }
 }
 
