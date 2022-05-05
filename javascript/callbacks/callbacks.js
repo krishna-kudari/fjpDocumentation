@@ -1,0 +1,2 @@
+// when a function can be passed as an argument inside an another function and it can be called later in time then it is known as callback function.
+//What do yu  understand from blocking the main thread.
