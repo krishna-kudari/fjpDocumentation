@@ -163,3 +163,17 @@ console.log(String(Math.trunc(Number("1.2"))));                // '1'   => not i
   for(let codee in codeee){
     console.log(+codee);                                    // 49     41    44      1
 }
+
+// interview questions
+
+let arr = [1, 2 , 1 , 3 , 6 , 1 , 1 , 1];
+let objec = {};
+// for(let i = 0;  i < arr.length ;i++){
+//     objec[arr[i]] = objec[arr[i]] + 1;
+// }
+// console.log(objec);                                      // { '1': NaN, '2': NaN, '3': NaN, '6': NaN } bcz initially it is undefined so undefined + 1 is NaN
+
+for(let i = 0;  i < arr.length ;i++){
+    objec[arr[i]] = objec[arr[i]] == undefined ? 1:objec[arr[i]] + 1;
+}
+console.log(objec);                                         // { '1': 5, '2': 1, '3': 1, '6': 1 }

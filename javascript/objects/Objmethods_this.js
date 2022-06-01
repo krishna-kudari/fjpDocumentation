@@ -25,12 +25,12 @@ library = {
     book:"the colors of white",
     pages:500,
     info:function display(){
-      this.book="hhhh"
-      let ram= function afun (){console.log(this.book+': '+this.pages);}
-    //    ram(); 
+        console.log(this);                      //this refers to the object.
+      let ram= function(){console.log(this);console.log(this.book+': '+this.pages);}    // functions has this as global object 
+       ram(); 
     }
 }
-library.info();                                                                  // 'undefined: undefined'  accessing this ouside an object results in undefined bcz this is not bound  it is undefined outside an object.
+library.info();                                                                  // global Object , 'undefined: undefined'  accessing this ouside an object results in undefined bcz this is not bound  it is undefined outside an object.
 
 library = {
     book:"the colors of white",
@@ -75,7 +75,7 @@ library = {
     pages:500,
     info:function display(){
       
-       (afun =()=> {console.log(this.book+': '+this.pages);})();
+       (afun =()=> {console.log(this.book+': '+this.pages);console.log(this);})();      // arraow funvtions dont have this (i,e no global object) so this refers to the object.
      
     }
 }

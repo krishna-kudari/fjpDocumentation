@@ -1,8 +1,6 @@
 //there are 8 basic datatypes in javascript //
 //Javascript is a dynamically typed language => anytime an identifier can shift between values 0f differnt datatypes.
 
-const { data } = require("cheerio/lib/api/attributes");
-
 //number                    //bigint                           
 //string                    //boolean
 //null                      //undefined
@@ -35,7 +33,7 @@ NaNn=9; //bcz currently strict mode is off so variables can be declares using no
 console.log(`${NaNn=NaN/0}`)// Nan
 
 //only way to manipulate NaN.
-console.log(NaN**0); // 1 //bcz ** is precedance from right to left and anything power zero is equals 1
+console.log("NaN"**0); // 1 //bcz ** is precedance from right to left and anything power zero is equals 1
  
 //BIGINT//
 
@@ -96,7 +94,7 @@ console.log( typeof console.log()) //undefined // bcz  console.log() returns not
 
 console.log(typeof null);  //object
 
-console.log(typeof (null + "1")); //string  // oh god strins are like thanos
+console.log(typeof (null + "1")); //string  // oh god strings are like thanos
 
 let space=null;
 console.log(space**null); //1 //null as numeric conversion becomes zero
@@ -122,7 +120,7 @@ console.log(typeof Object) //function
 
 // objects are special type of  that is capable binding all the datatypes functions arrays classes
 
-console.log(datatype)  //reference error not defined
+// console.log(datatype)  //reference error not defined
 console.log(typeof datatype)  //undefined
 
 console.log(typeof(console.log)) //function //console is an object and log is its method/functio inside it
