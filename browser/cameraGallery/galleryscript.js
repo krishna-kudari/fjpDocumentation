@@ -42,6 +42,7 @@ setTimeout(() => {
           deleteBtns.addEventListener("click", deleteListener);
         })
         
+        
 
         let downloadBtn = document.querySelectorAll(".download");
         downloadBtn.forEach((downloadBtn)=>{

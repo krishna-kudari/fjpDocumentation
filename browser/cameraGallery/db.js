@@ -7,6 +7,7 @@ openRequest.addEventListener('success', () =>{
     db = openRequest.result;
 });
 
+
 openRequest.addEventListener('upgradeneeded', () =>{
     console.log('db upgraded or initialised db');
     db = openRequest.result;

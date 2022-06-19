@@ -30,6 +30,7 @@ navigator.mediaDevices.getUserMedia(constraints)
     recorder.addEventListener("dataavailable",(e)=>{
         chunks.push(e.data);
     })
+    
     recorder.addEventListener("stop",()=>{
         let blob = new Blob(chunks ,{type:"video/mkv"} );
      

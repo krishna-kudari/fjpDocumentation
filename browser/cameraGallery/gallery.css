@@ -99,12 +99,13 @@ body{
     background-color: rgb(220,200,255);
     border: 5px solid white;
     display: flex;
-    justify-content:stretch;
+    justify-gitcontent:stretch;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
     border-radius: 8px;
     margin: 1rem;
+    
 }
 .media-cont img, .media-cont video{
     width: 100%;
