@@ -81,3 +81,26 @@ library = {
 }
 
 library.info()                                                                          // the colors of white: 500
+
+let obj ={
+    name  : "I am Object"
+}
+function sayHi(){
+    console.log(this.name);
+}
+
+// obj.sayHi();                                                                         // TypeError: obj.sayHi is not a function
+obj.sayHi = sayHi;
+obj.sayHi();                                                                            // I am Object.
+
+let f = sayHi;
+// obj.f();                                                                                // TypeError: obj.f is not a function
+
+f();                                                                                    // undefined
+console.log(this);                                                                      //{}
+this.name = "hi";
+console.log(this);                                                                      //{ name: 'hi' }
+f();                                                                                    //undefined
+sayHi()                                                                                 //undefined
+// ----------> Important <---------
+// In browser this in global refers to window object and properties which are not present will give empty string.
